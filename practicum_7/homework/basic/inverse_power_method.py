@@ -1,17 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from src.common import NDArrayFloat
-
 
 def inverse_power_method(A: NDArrayFloat, n_iters: int) -> NDArrayFloat:
+    x = np.random.rand(A.shape[0])
 
-    ##########################
-    ### PUT YOUR CODE HERE ###
-    ##########################
+    for _ in range(n_iters):
+        y = np.dot(A, x)
+        x = y / np.linalg.norm(y)
 
-    pass
+    eigenvalue = np.dot(x, np.dot(A, x))
 
+    return eigenvalue
 
 if __name__ == "__main__":
     A = np.array(

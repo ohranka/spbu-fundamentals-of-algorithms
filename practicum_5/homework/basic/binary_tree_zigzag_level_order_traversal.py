@@ -51,7 +51,7 @@ class BinaryTree:
 
         return result
     
-  def build_tree(list_view: list[Any]) -> BinaryTree:
+def build_tree(list_view: list[Any]) -> BinaryTree:
     bt = BinaryTree()
 
     if not list_view:

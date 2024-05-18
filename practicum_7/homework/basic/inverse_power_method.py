@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def inverse_power_method(A: NDArrayFloat, n_iters: int) -> NDArrayFloat:
+def inverse_power_method(A: NDArrayFloat, n_iters: int):
     x = np.random.rand(A.shape[0])
 
     for _ in range(n_iters):
